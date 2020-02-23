@@ -25,6 +25,7 @@ public class OwnStack implements Cloneable{
         int len = stack.Length() - commonNode;
         for (int i = 0; i < len; i++)
         {
+            if (stack.head.next() == null) break;
             stack.Pop();
         }
         this.head = stack.head;
@@ -100,5 +101,9 @@ public class OwnStack implements Cloneable{
     public Integer Length()
     {
         return this.length;
+    }
+    public ForwardList Head()
+    {
+        return this.head;
     }
 }
